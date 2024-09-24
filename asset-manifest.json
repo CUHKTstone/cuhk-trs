@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/hkclr-trs/static/css/main.101fcd94.css",
-    "main.js": "/hkclr-trs/static/js/main.1f3a74bf.js",
+    "main.js": "/hkclr-trs/static/js/main.e462024a.js",
     "index.html": "/hkclr-trs/index.html",
     "main.101fcd94.css.map": "/hkclr-trs/static/css/main.101fcd94.css.map",
-    "main.1f3a74bf.js.map": "/hkclr-trs/static/js/main.1f3a74bf.js.map"
+    "main.e462024a.js.map": "/hkclr-trs/static/js/main.e462024a.js.map"
   },
   "entrypoints": [
     "static/css/main.101fcd94.css",
-    "static/js/main.1f3a74bf.js"
+    "static/js/main.e462024a.js"
   ]
 }
