@@ -40,20 +40,8 @@ function NavigationBar() {
                             <LinkContainer to="/project-overview">
                                 <Nav.Link>Subtopics</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/events">
-                                <Nav.Link>Events</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/publicity">
-                                <Nav.Link>Publicity</Nav.Link>
-                            </LinkContainer>
                             <LinkContainer to="/tech-transfer">
                                 <Nav.Link>Tech Transfer</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/project-introduction">
-                                <Nav.Link>Project Introduction</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/pi-introduction">
-                                <Nav.Link>PI Introduction</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/journal-papers">
                                 <Nav.Link>Journal Papers</Nav.Link>

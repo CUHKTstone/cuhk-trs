@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 const contactInfo = [
-    { "name": "Miss Elizabeth Ko", "post": "Executive Officer", "phoneNo": "3943-9873", "email": "pyko@cuhk.edu.hk" },
-    { "name": "Miss Elle Wong", "post": "Project Coordinator", "phoneNo": "3943-0815", "email": "ellewong@cuhk.edu.hk" }
+    { "name": "Miss Elizabeth Ko", "post": "Centre Manager", "phoneNo": "3943-9873", "email": "pyko@cuhk.edu.hk" },
+    { "name": "Miss Coco Cheung", "post": "Executive Officer", "phoneNo": "3943-0815", "email": "cococheung@cuhk.edu.hk" }
 ]
 
 function Contact() {
