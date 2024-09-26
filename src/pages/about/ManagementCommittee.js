@@ -6,16 +6,16 @@ import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 
 const members = [
-    { "initial": "yhliu", "name": "Prof. Liu Yunhui", "url": "http://www3.mae.cuhk.edu.hk/people/list.php?name=yhliu", "title1": "Choh-Ming Li Professor", "title2": "Director, T Stone Robotics Institute, CUHK" },
-    { "initial": "jysung", "name": "Prof. Sung Joseph Jao Yiu", "url": "https://aims.cuhk.edu.hk/converis/portal/Person/5001905?auxfun=&lang=en_GB", "title1": "Dean and Distinguished University Professor, Lee Kong Chian School of Medicine, NYU", "title2": "" },
-    { "initial": "qhmeng", "name": "Prof. Meng Max Qing Hu", "url": "http://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/chairman/30-prof-qing-hu-max-meng", "title1": "Chair Professor, Electronic & Electrical Engineering, SUSTech", "title2": "" },
-    { "initial": "wychiu", "name": "Prof. Chiu Philip Wai Yan", "url": "http://www.med.cuhk.edu.hk/eng/about_us/faculty_management/Deanery/InstitutionalAffairs/philip_chiu.jsp", "title1": "Professor, Department of Surgery, CUHK", "title2": "" },
-    { "initial": "dsun", "name": "Prof. Sun Dong", "url": "http://www.cityu.edu.hk/mbe/medsun/", "title1": "Secretary for Innovation, Technology and Industry, Innovation, Technology and Industry Bureau, HKSAR Government", "title2": "" },
-    { "initial": "kwkwok", "name": "Prof. Kwok Ka Wai", "url": "http://hub.hku.hk/cris/rp/rp01924", "title1": "Professor, Mechanical and Automation Engineering, CUHK", "title2": "" },
-    { "initial": "cftong", "name": "Prof. Tong Michael Chi Fai", "url": "http://www.ent.cuhk.edu.hk/staff-profiles/professor-tong-chi-fai-michael", "title1": "Professor and Chairman, Otorhinolaryngology, Head and Neck Surgery, CUHK", "title2": "" },
-    { "initial": "kwau", "name": "Prof. Au Samuel Kwok Wai", "url": "http://www.mae.cuhk.edu.hk/people/list.php?name=samuelau", "title1": "Associate Professor, Mechanical and Automation Engineering, CUHK", "title2": "" },
-    { "initial": "paheng", "name": "Prof. Heng Pheng Ann", "url": "http://www.cse.cuhk.edu.hk/~pheng/", "title1": "Professor, Computer Science & Engineering, CUHK", "title2": "" },
-    { "initial": "thcheung", "name": "Dr. Cheung Tak Hong", "url": "http://www.obg.cuhk.edu.hk/cheung-tak-hong1/", "title1": "Consultant, Gynecology, CUHK", "title2": "" },
+    { "initial": "yhliu", "name": "Prof. Liu Yunhui", "email": "yhliu@mae.cuhk.edu.hk", "title1": "Choh-Ming Li Professor", "title2": "Director, T Stone Robotics Institute, CUHK" },
+    { "initial": "jysung", "name": "Prof. Sung Joseph Jao Yiu", "email": "josephsung@ntu.edu.sg", "title1": "Dean and Distinguished University Professor, Lee Kong Chian School of Medicine, NYU", "title2": "" },
+    { "initial": "qhmeng", "name": "Prof. Meng Max Qing Hu", "email": "mengqh@sustech.edu.cn", "title1": "Chair Professor, Electronic & Electrical Engineering, SUSTech", "title2": "" },
+    { "initial": "wychiu", "name": "Prof. Chiu Philip Wai Yan", "email": "philipchiu@cuhk.edu.hk", "title1": "Professor, Department of Surgery, CUHK", "title2": "" },
+    { "initial": "dsun", "name": "Prof. Sun Dong", "email": "medsun@cityu.edu.hk", "title1": "Secretary for Innovation, Technology and Industry, Innovation, Technology and Industry Bureau, HKSAR Government", "title2": "" },
+    { "initial": "kwkwok", "name": "Prof. Kwok Ka Wai", "email": "kwokkw@mae.cuhk.edu.hk", "title1": "Professor, Mechanical and Automation Engineering, CUHK", "title2": "" },
+    { "initial": "cftong", "name": "Prof. Tong Michael Chi Fai", "email": "mtong@cuhk.edu.hk", "title1": "Professor and Chairman, Otorhinolaryngology, Head and Neck Surgery, CUHK", "title2": "" },
+    { "initial": "kwau", "name": "Prof. Au Samuel Kwok Wai", "email": "samuelau@cuhk.edu.hk", "title1": "Associate Professor, Mechanical and Automation Engineering, CUHK", "title2": "" },
+    { "initial": "paheng", "name": "Prof. Heng Pheng Ann", "email": "pheng@cse.cuhk.edu.hk", "title1": "Professor, Computer Science & Engineering, CUHK", "title2": "" },
+    { "initial": "thcheung", "name": "Dr. Cheung Tak Hong", "email": "thcheung@cuhk.edu.hk", "title1": "Consultant, Gynecology, CUHK", "title2": "" },
 ]
 
 function ManagementCommittee() {
@@ -37,7 +37,7 @@ function ManagementCommittee() {
                     {members.map((member, i) =>
                         <Row key={"member_" + i.toString()}>
                             <Col md={4}>
-                                <Link to={member.url}>
+                                <Link to={member.email}>
                                     <Image
                                         src={'./images/prof/' + member.initial + '.jpg'}
                                         alt={member.initial} title={member.initial}
@@ -47,7 +47,7 @@ function ManagementCommittee() {
                             </Col>
                             <Col md={8}>
                                 <p>
-                                    <Link to={member.url}>{member.name}</Link>
+                                    <Link to={"mailto:" + member.email}>{member.name}</Link>
                                     <strong>{member.initial === "yhliu" ? " (Chairperson)" : ""}</strong><br />
                                     {member.title1}<br />
                                     {member.title2}
