@@ -128,7 +128,7 @@ function JournalPapers() {
                 <h3>Journal Papers</h3>
                 <ol>
                     {paperInfo.map((item, i) =>
-                        <li key={"contact" + i.toString()}>
+                        <li key={"contact" + i.toString()} className='pb-4'>
                             {item.ref}<br />
                             <a href={item.url}>{item.url}</a>
                         </li>

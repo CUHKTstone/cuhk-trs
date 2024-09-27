@@ -37,7 +37,7 @@ function ManagementCommittee() {
                     {members.map((member, i) =>
                         <Row key={"member_" + i.toString()}>
                             <Col md={4}>
-                                <Link to={member.email}>
+                                <Link to={"mailto:" + member.email}>
                                     <Image
                                         src={'./images/prof/' + member.initial + '.jpg'}
                                         alt={member.initial} title={member.initial}

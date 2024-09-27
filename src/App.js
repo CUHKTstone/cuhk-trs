@@ -15,6 +15,7 @@ import News from './pages/News';
 import TRSSymposium from './pages/events/TRSSymposium';
 import JournalPapers from './pages/JournalPapers';
 import ConferencePapers from './pages/ConferencePapers';
+import TechTransfer from './pages/TechTransfer';
 
 const subtopicsContent = [
   {
@@ -63,7 +64,7 @@ const newsContent = [
 
 function App() {
   return (
-    <Router basename='/cuhk-trs'>
+    <Router basename='/cuhk-trs/'>
       <div>
         <NavigationBar />
         <main className='py-4'>
@@ -91,9 +92,10 @@ function App() {
                 path={"/news-" + news.year.toString()}
                 element={<News content={news} newsYearList={newsContent.map(item => item.year)} />} />
             ))}
-            <Route path="/trs-symposium-2019" element={<TRSSymposium />} />
+            <Route path="/tech-transfer" element={<TechTransfer />} />
             <Route path="/journal-papers" element={<JournalPapers />} />
             <Route path="/conference-papers" element={<ConferencePapers />} />
+            <Route path="/trs-symposium-2019" element={<TRSSymposium />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
