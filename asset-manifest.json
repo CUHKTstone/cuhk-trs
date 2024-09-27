@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cuhk-trs/static/css/main.101fcd94.css",
-    "main.js": "/cuhk-trs/static/js/main.fb4c8b7e.js",
+    "main.js": "/cuhk-trs/static/js/main.e89fed37.js",
     "index.html": "/cuhk-trs/index.html",
     "main.101fcd94.css.map": "/cuhk-trs/static/css/main.101fcd94.css.map",
-    "main.fb4c8b7e.js.map": "/cuhk-trs/static/js/main.fb4c8b7e.js.map"
+    "main.e89fed37.js.map": "/cuhk-trs/static/js/main.e89fed37.js.map"
   },
   "entrypoints": [
     "static/css/main.101fcd94.css",
-    "static/js/main.fb4c8b7e.js"
+    "static/js/main.e89fed37.js"
   ]
 }
