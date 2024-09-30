@@ -2,7 +2,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Table from 'react-bootstrap/Table';
 import Figure from 'react-bootstrap/Figure';
 import { Link } from "react-router-dom";
 
@@ -14,7 +13,7 @@ const subtopicContents = [
     { "title": "System integration, prototyping and experimental evaluation", "content": "Develop a prototype of image-guided automatic robot surgery and validate the enabling technologies using" },
 ]
 
-function ResearchTopic({ subTopicCount }) {
+function ResearchTopic() {
     return (
         <Container>
             <Row>
@@ -22,8 +21,8 @@ function ResearchTopic({ subTopicCount }) {
                     <h5>Research Topic</h5>
                     <ul>
                         <li><Link to='/research-topic'>Overview</Link></li>
-                        <li><Link to='/subtopic-1'>Topic 1: Real-time sensing and perception</Link></li>
-                        <li><Link to='/subtopic-2'>Topic 2: Image-guided surgery planning and navigation</Link></li>
+                        <li><Link to='/subtopic-1'>Topic 1: Real-time Sensing and Perception</Link></li>
+                        <li><Link to='/subtopic-2'>Topic 2: Image-guided Surgery Planning and Navigation</Link></li>
                         <li><Link to='/subtopic-3'>Topic 3: Image-Based Motion/Action Control</Link></li>
                         <li><Link to='/subtopic-4'>Topic 4: Robotic Surgery Intelligence</Link></li>
                         <li><Link to='/subtopic-5'>Topic 5: System Integration, Prototyping, and Experimental Evaluation</Link></li>
@@ -31,14 +30,10 @@ function ResearchTopic({ subTopicCount }) {
                 </Col>
                 <Col md={8}>
                     <h3>Research Topic</h3>
-                    <p>
-                        The scientific objective of this project is to develop enabling technologies so that surgical robots can automatically conduct steps of surgical procedures and/or to intelligently assist surgeons with required accuracy and guaranteed safety. Although full automation of interventional procedures is a long-term dream, our research is focused on the automation of surgical steps/sub-tasks and the development of automated robotic assistants. It should be noted that the automation is not limited to single steps, and may involve execution of several connected steps. Such autonomous robots need have the ability (i) to sense and perceive surgical objects; (ii) to plan and navigate themselves; (iii) to perform the procedures on soft tissues/organs; and (iv) to be aware of surgical situations and to make proper decisions. To address the technical challenges, we have identified the following <strong>five key research topics</strong>:
-                    </p>
+                    <p>The scientific objective of this project is to develop enabling technologies so that surgical robots can automatically conduct steps of surgical procedures and/or to intelligently assist surgeons with required accuracy and guaranteed safety. Although full automation of interventional procedures is a long-term dream, our research is focused on the automation of surgical steps/sub-tasks and the development of automated robotic assistants. It should be noted that the automation is not limited to single steps, and may involve execution of several connected steps. Such autonomous robots need have the ability (i) to sense and perceive surgical objects; (ii) to plan and navigate themselves; (iii) to perform the procedures on soft tissues/organs; and (iv) to be aware of surgical situations and to make proper decisions. To address the technical challenges, we have identified the following <strong>five key research topics</strong>:</p>
                     <ol>
                         {subtopicContents.map((content, i) => (
-                            <li>
-                                <strong>{content.title}</strong>: {content.content}
-                            </li>
+                            <li><strong>{content.title}</strong>: {content.content}</li>
                         ))}
                     </ol>
                     <Figure>

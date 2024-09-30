@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -8,11 +11,11 @@ function Footer() {
                 <Row>
                     <Col className="text-end">
                         <p>
-                            <a href='http://www.cuhk.edu.hk/'>CUHK</a>&nbsp;|&nbsp;
-                            <a href='http://ri.cuhk.edu.hk/'>T Stone Robotics Institute</a>&nbsp;|&nbsp;
-                            <a href='/privacy'>Privacy</a>&nbsp;|&nbsp;
-                            <a href='/discliamer'>Discliamer</a>&nbsp;|&nbsp;
-                            <a href='/contact'>Contact Us</a>
+                            <Link to='http://www.cuhk.edu.hk/'>CUHK</Link>&nbsp;|&nbsp;
+                            <Link to='http://ri.cuhk.edu.hk/'>T Stone Robotics Institute</Link>&nbsp;|&nbsp;
+                            <Link to='/privacy'>Privacy</Link>&nbsp;|&nbsp;
+                            <Link to='/discliamer'>Discliamer</Link>&nbsp;|&nbsp;
+                            <Link to='/contact'>Contact Us</Link>
                         </p>
                         <p>Copyright © 2024 T Stone Robotics Institute, The Chinese University of Hong Kong. All rights reserved.</p>
                     </Col>

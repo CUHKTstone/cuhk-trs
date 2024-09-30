@@ -21,6 +21,8 @@ import ParticipatingOrganisation from './pages/about/ParticipatingOrganisation';
 import AdvisoryCommittee from './pages/about/AdvisoryCommittee';
 import SpinOffCompany from './pages/tech-transfer/SpinOffCompany';
 import Gallery from './pages/Gallery';
+import Topic1 from './pages/subtopics/Topic1';
+import Topic2 from './pages/subtopics/Topic2';
 import Topic3 from './pages/subtopics/Topic3';
 import Topic4 from './pages/subtopics/Topic4';
 import Topic5 from './pages/subtopics/Topic5';
@@ -123,6 +125,8 @@ function App() {
             {/* <Route path="/mission-goals" element={<MissionGoals />} /> */}
             {/* <Route path="/abstract" element={<Abstract />} /> */}
             <Route path="/research-topic" element={<ResearchTopic subTopicCount={subtopicsContent.length} />} />
+            <Route path="/subtopic-1" element={<Topic1 />} />
+            <Route path="/subtopic-2" element={<Topic2 />} />
             <Route path="/subtopic-3" element={<Topic3 />} />
             <Route path="/subtopic-4" element={<Topic4 />} />
             <Route path="/subtopic-5" element={<Topic5 />} />

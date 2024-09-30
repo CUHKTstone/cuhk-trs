@@ -13,8 +13,8 @@ function Topic4() {
                     <h5>Research Topic</h5>
                     <ul>
                         <li><Link to='/research-topic'>Overview</Link></li>
-                        <li><Link to='/subtopic-1'>Topic 1: Real-time sensing and perception</Link></li>
-                        <li><Link to='/subtopic-2'>Topic 2: Image-guided surgery planning and navigation</Link></li>
+                        <li><Link to='/subtopic-1'>Topic 1: Real-time Sensing and Perception</Link></li>
+                        <li><Link to='/subtopic-2'>Topic 2: Image-guided Surgery Planning and Navigation</Link></li>
                         <li><Link to='/subtopic-3'>Topic 3: Image-Based Motion/Action Control</Link></li>
                         <li><Link to='/subtopic-4'>Topic 4: Robotic Surgery Intelligence</Link></li>
                         <li><Link to='/subtopic-5'>Topic 5: System Integration, Prototyping, and Experimental Evaluation</Link></li>
