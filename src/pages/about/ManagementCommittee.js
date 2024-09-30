@@ -25,11 +25,11 @@ function ManagementCommittee() {
                 <Col md={4}>
                     <h5>About</h5>
                     <ul>
-                        <li><Link to='/welcome-message'>Welcome Message</Link></li>
-                        <li><Link to='/about-us'>About Us</Link></li>
-                        <li><Link to='/abstract'>Abstract</Link></li>
-                        <li><Link to='/mission-goals'>Mission & Goals</Link></li>
+                        <li><Link to='/project-introduction'>Project Introduction</Link></li>
+                        <li><Link to='/research-team'>Research Team</Link></li>
+                        <li><Link to='/participating-organisation'>Participating Organisation</Link></li>
                         <li><Link to='/management-committee'>Management Committee</Link></li>
+                        <li><Link to='/advisory-committee'>Advisory Committee</Link></li>
                     </ul>
                 </Col>
                 <Col md={8}>

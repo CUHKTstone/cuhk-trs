@@ -2,20 +2,64 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/Navbar';
 import Home from './pages/Home';
-import AboutUs from './pages/about/AboutUs';
+import ResearchTeam from './pages/about/ResearchTeam';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
-import WelcomeMessage from './pages/about/WelcomeMessage';
-import Abstract from './pages/about/Abstract';
-import MissionGoals from './pages/about/MissionGoals';
+// import WelcomeMessage from './pages/about/WelcomeMessage';
+// import Abstract from './pages/about/Abstract';
+// import MissionGoals from './pages/about/MissionGoals';
+// import News from './pages/News';
+import ProjectIntroduction from './pages/about/ProjectIntroduction';
 import ManagementCommittee from './pages/about/ManagementCommittee';
-import ProjectOverview from './pages/subtopics/ProjectOverview';
-import Subtopic from './pages/subtopics/Subtopic';
-import News from './pages/News';
+import ResearchTopic from './pages/subtopics/ResearchTopic';
+// import Subtopic from './pages/subtopics/Subtopic';
 import TRSSymposium from './pages/events/TRSSymposium';
-import JournalPapers from './pages/JournalPapers';
-import ConferencePapers from './pages/ConferencePapers';
-import TechTransfer from './pages/TechTransfer';
+import JournalPapers from './pages/research-output/JournalPapers';
+import ConferencePapers from './pages/research-output/ConferencePapers';
+import Patent from './pages/tech-transfer/Patent';
+import ParticipatingOrganisation from './pages/about/ParticipatingOrganisation';
+import AdvisoryCommittee from './pages/about/AdvisoryCommittee';
+import SpinOffCompany from './pages/tech-transfer/SpinOffCompany';
+import Gallery from './pages/Gallery';
+import Topic3 from './pages/subtopics/Topic3';
+import Topic4 from './pages/subtopics/Topic4';
+import Topic5 from './pages/subtopics/Topic5';
+
+const galleryContent = [
+  {
+    "title": "ICRA 2024 @ Yokohama",
+    "root": "icra-2024-yokohama",
+    "images": [
+      { "filename": "Picture1.jpg", "caption": "Group Photo" },
+      { "filename": "Picture2.jpg", "caption": "Prof. Liu gave an invited speech at the workshop “Autonomy in Robotics Surgery: State of the art, technical and regulatory challenges for clinical application" },
+    ]
+  },
+  {
+    "title": "ICRA 2023 @ London",
+    "root": "icra-2023-london",
+    "images": [
+      { "filename": "Picture1.jpg", "caption": "Group Photo" }
+    ]
+  },
+  {
+    "title": "Robotics Open Day 2023",
+    "root": "robotics-open-day-2023",
+    "images": [
+      { "filename": "Picture1.jpg", "caption": "" },
+      { "filename": "Picture2.jpg", "caption": "" }
+    ]
+  },
+  {
+    "title": "TRS Symposium 2019",
+    "root": "trs-symposium-2019-new",
+    "images": [
+      { "filename": "Picture1.jpg", "caption": "" },
+      { "filename": "Picture2.jpg", "caption": "" },
+      { "filename": "Picture3.jpg", "caption": "" },
+      { "filename": "Picture4.jpg", "caption": "" }
+    ]
+  },
+]
 
 const subtopicsContent = [
   {
@@ -49,18 +93,19 @@ const subtopicsContent = [
     "description": "The objective of this topic is to develop prototypes, integrate the enabling technologies, and verify their performance for real surgical procedures by ex-vivo experiments, and clinical trials, if allowed."
   },
 ]
-const newsContent = [
-  {
-    "year": 2019,
-    "news": []
-  },
-  {
-    "year": 2018,
-    "news": [
-      { "date": "16 July 2018", "url": "https://www.info.gov.hk/gia/general/201807/16/P2018071600385.htm?fontSize=1", "img": "./images/event1.jpg", "title": "Funding results of Theme-based Research Scheme 2018/19 announced" }
-    ]
-  }
-]
+
+// const newsContent = [
+//   {
+//     "year": 2019,
+//     "news": []
+//   },
+//   {
+//     "year": 2018,
+//     "news": [
+//       { "date": "16 July 2018", "url": "https://www.info.gov.hk/gia/general/201807/16/P2018071600385.htm?fontSize=1", "img": "./images/event1.jpg", "title": "Funding results of Theme-based Research Scheme 2018/19 announced" }
+//     ]
+//   }
+// ]
 
 function App() {
   return (
@@ -70,31 +115,37 @@ function App() {
         <main className='py-4'>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/welcome-message" element={<WelcomeMessage />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/abstract" element={<Abstract />} />
-            <Route path="/mission-goals" element={<MissionGoals />} />
+            <Route path="/project-introduction" element={<ProjectIntroduction />} />
+            <Route path="/research-team" element={<ResearchTeam />} />
+            <Route path="/participating-organisation" element={<ParticipatingOrganisation />} />
             <Route path="/management-committee" element={<ManagementCommittee />} />
-            <Route path="/project-overview" element={<ProjectOverview subTopicCount={subtopicsContent.length} />} />
-            {subtopicsContent.map((subtopic, index) => (
+            <Route path="/advisory-committee" element={<AdvisoryCommittee />} />
+            {/* <Route path="/mission-goals" element={<MissionGoals />} /> */}
+            {/* <Route path="/abstract" element={<Abstract />} /> */}
+            <Route path="/research-topic" element={<ResearchTopic subTopicCount={subtopicsContent.length} />} />
+            <Route path="/subtopic-3" element={<Topic3 />} />
+            <Route path="/subtopic-4" element={<Topic4 />} />
+            <Route path="/subtopic-5" element={<Topic5 />} />
+            {/* {subtopicsContent.map((subtopic, index) => (
               <Route
                 key={"subtopic_" + index.toString()}
                 path={"/subtopic-" + (index + 1).toString()}
                 element={<Subtopic content={subtopic} subTopicCount={subtopicsContent.length} />} />
-            ))}
+            ))} */}
             <Route
-              path={"/news"}
-              element={<News content={newsContent[0]} newsYearList={newsContent.map(item => item.year)} />}
+              path={"/gallery"}
+              element={<Gallery event={galleryContent[0]} contents={galleryContent} />}
             />
-            {newsContent.map((news, index) => (
+            {galleryContent.map((event, i) => (
               <Route
-                key={"news_" + news.year.toString()}
-                path={"/news-" + news.year.toString()}
-                element={<News content={news} newsYearList={newsContent.map(item => item.year)} />} />
+                key={i}
+                path={"/gallery/" + event.root}
+                element={<Gallery event={event} contents={galleryContent} />} />
             ))}
-            <Route path="/tech-transfer" element={<TechTransfer />} />
             <Route path="/journal-papers" element={<JournalPapers />} />
             <Route path="/conference-papers" element={<ConferencePapers />} />
+            <Route path="/patent" element={<Patent />} />
+            <Route path="/spin-off-company" element={<SpinOffCompany />} />
             <Route path="/trs-symposium-2019" element={<TRSSymposium />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

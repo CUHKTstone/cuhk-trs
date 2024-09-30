@@ -31,26 +31,26 @@ function NavigationBar() {
                             <LinkContainer to="/">
                                 <Nav.Link>Home</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/news">
-                                <Nav.Link>News</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/welcome-message">
+                            <LinkContainer to="/project-introduction">
                                 <Nav.Link>About</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/project-overview">
-                                <Nav.Link>Subtopics</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/tech-transfer">
-                                <Nav.Link>Tech Transfer</Nav.Link>
+                            <LinkContainer to="/research-topic">
+                                <Nav.Link>Research Topic</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/journal-papers">
-                                <Nav.Link>Journal Papers</Nav.Link>
+                                <Nav.Link>Research Output</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/conference-papers">
+                            {/* <LinkContainer to="/conference-papers">
                                 <Nav.Link>Conference Papers</Nav.Link>
+                            </LinkContainer> */}
+                            <LinkContainer to="/patent">
+                                <Nav.Link>Technology Transfer</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/trs-symposium-2019">
+                            {/* <LinkContainer to="/trs-symposium-2019">
                                 <Nav.Link>TRS Symposium 2019</Nav.Link>
+                            </LinkContainer> */}
+                            <LinkContainer to="/gallery">
+                                <Nav.Link>Meetings and Workshops Gallery</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/contact">
                                 <Nav.Link>Contact</Nav.Link>
